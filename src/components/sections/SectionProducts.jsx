@@ -5,7 +5,7 @@ import { fadeIn } from "../../variants";
 const products = [
   {
     id: 1,
-    image: "../../assets/images/product-01.jpg",
+    image: "../../../product-01.jpg",
     promo: "-20",
     beforePrice: "59",
     afterPrice: "35",
@@ -15,7 +15,7 @@ const products = [
   },
   {
     id: 2,
-    image: "../../assets/images/product-02.jpg",
+    image: "../../../product-02.jpg",
     promo: "-27",
     beforePrice: "59",
     afterPrice: "35",
@@ -25,7 +25,7 @@ const products = [
   },
   {
     id: 3,
-    image: "../../assets/images/product-03.jpg",
+    image: "../../../product-03.jpg",
     promo: "-50",
     beforePrice: "59",
     afterPrice: "35",
@@ -35,7 +35,7 @@ const products = [
   },
   {
     id: 4,
-    image: "../../assets/images/product-04.jpg",
+    image: "../../../product-04.jpg",
     promo: "-30",
     beforePrice: "59",
     afterPrice: "35",
@@ -45,7 +45,7 @@ const products = [
   },
   {
     id: 5,
-    image: "../../assets/images/product-05.jpg",
+    image: "../../../product-05.jpg",
     promo: "-25",
     beforePrice: "59",
     afterPrice: "35",
@@ -55,7 +55,7 @@ const products = [
   },
   {
     id: 6,
-    image: "../../assets/images/product-06.jpg",
+    image: "../../../product-06.jpg",
     promo: "-25",
     beforePrice: "59",
     afterPrice: "35",
