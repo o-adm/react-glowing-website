@@ -71,11 +71,7 @@ function Footer() {
             </div>
           </div>
           <Logo className="footer__logo" />
-          <img
-            className="footer__pay"
-            src="../../src/assets/images/pay.png"
-            alt=""
-          />
+          <img className="footer__pay" src="../../../images/pay.png" alt="" />
         </div>
       </motion.div>
     </footer>
