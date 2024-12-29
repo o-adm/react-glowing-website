@@ -1,0 +1,40 @@
+.theme-toggle {
+  background-color: #ededed;
+  padding: 0.1rem 1rem;
+  border-radius: 10rem;
+  max-height: 5rem;
+  flex-basis: 8rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.2);
+  transition: all 10s;
+
+  &-light,
+  &-dark {
+    display: block;
+    border-radius: 50%;
+    line-height: 1;
+    padding: 0.5rem;
+    border: none;
+    outline: none;
+
+    svg {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &-light {
+    background-color: rgb(190, 190, 87);
+  }
+
+  &-dark {
+    background-color: var(--cl-black);
+
+    svg {
+      fill: var(--cl-white);
+    }
+  }
+}

@@ -1,0 +1,124 @@
+.header {
+  border-bottom: 1px solid #7d7d7d28;
+
+  &__top {
+    background-color: var(--cl-yellow-light);
+    text-align: center;
+    font-weight: 700;
+    color: var(--cl-black);
+    padding-block: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+  }
+
+  &__nav {
+    padding-inline: 2rem;
+    padding-block-start: 1rem;
+
+    display: grid;
+    grid-template-columns: repeat(3, minmax(auto, 1fr));
+    align-items: center;
+  }
+
+  &__logo {
+    font-size: 2.5rem;
+    justify-self: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--cl-black);
+  }
+
+  &__nav-list {
+    grid-column: 1 / -1;
+    padding-block: 1.5rem;
+
+    @include breakpoint(tab-land) {
+      display: none;
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 4rem;
+    }
+
+    a {
+      &:link,
+      &:visited {
+        display: block;
+        text-decoration: none;
+        color: var(--primary-color);
+        font-weight: 500;
+        transition: all 0.3s;
+      }
+
+      &:hover {
+        color: var(--cl-black);
+        transform: scaleX(1.1);
+      }
+    }
+  }
+}
+
+#hamburger {
+  display: none;
+
+  @include breakpoint(tab-land) {
+    display: block;
+  }
+}
+
+.mobile-nav {
+  opacity: 0;
+  position: fixed;
+  z-index: 99999999;
+  top: 0;
+  left: 0;
+  padding: 3rem;
+  background-color: var(--cl-white);
+  width: 100%;
+  min-height: 100vh;
+  transform: translateX(-100%);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+
+  &-active {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  &__close {
+    font-size: 5rem;
+    line-height: 0;
+    display: inline-block;
+    position: absolute;
+    right: 2rem;
+    top: 6rem;
+    font-weight: 300;
+    cursor: pointer;
+  }
+
+  &__list {
+    margin-top: 4rem;
+
+    ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    a {
+      color: var(--cl-black);
+      text-decoration: none;
+      font-size: 2rem;
+      text-transform: uppercase;
+      font-weight: 600;
+      transition: all 0.3s;
+
+      &:hover {
+        color: var(--primary-color);
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+@mixin button($background, $color, $border: transparent) {
+  background-color: $background;
+  color: $color;
+  border: 1px solid $border;
+}
+
+// mobile : 0 - 600px
+// tab portrait : 600px - 900px
+// tab land : 900px - 1200px
+// Our normal style :  1200px - 1800px
+// Big desktop : 1800px+
+
+@mixin breakpoint($bp) {
+  @if $bp == mobile {
+    @media only screen and (max-width: 37.5em) {
+      @content;
+    }
+  }
+  @if $bp == tab-port {
+    @media only screen and (max-width: 56.25em) {
+      @content;
+    }
+  }
+  @if $bp == tab-land {
+    @media only screen and (max-width: 75em) {
+      @content;
+    }
+  }
+  @if $bp == big-desktop {
+    @media only screen and (min-width: 112.5em) {
+      @content;
+    }
+  }
+}
+
+@mixin hide-on-breakpoint($bp) {
+  @include breakpoint($bp) {
+    display: none;
+  }
+}

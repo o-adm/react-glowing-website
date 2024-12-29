@@ -1,0 +1,33 @@
+%absolute-0 {
+  position: absolute;
+  inset: 0;
+}
+
+%cover-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+%hover-light {
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    left: -100%;
+    background-image: linear-gradient(
+      to right,
+      transparent 50%,
+      rgba(255, 255, 255, 0.427)
+    );
+    height: 100%;
+    width: 15rem;
+    transform: skewX(-15deg);
+    z-index: 2;
+    transition: all 0.5s ease-in-out;
+  }
+
+  &:hover::before {
+    animation: hoveredLight 0.5s ease;
+  }
+}

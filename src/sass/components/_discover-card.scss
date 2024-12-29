@@ -1,0 +1,53 @@
+.discover {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+
+  &__card {
+    flex-basis: calc((100% - 2 * 3rem) / 3);
+    position: relative;
+    overflow: hidden;
+
+    @extend %hover-light;
+
+    @include breakpoint(tab-port) {
+      min-width: calc((100% - 3rem) / 2);
+    }
+
+    @include breakpoint(mobile) {
+      min-width: 100%;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    aspect-ratio: 5 /3;
+    overflow: hidden;
+
+    img {
+      @extend %cover-image;
+      transition: all 0.2s;
+    }
+
+    &:hover img {
+      transform: scale(1.1);
+    }
+  }
+
+  &__content {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    color: var(--cl-black);
+
+    & > * {
+      font-weight: 500;
+    }
+  }
+
+  &__title {
+    font-size: 3rem;
+  }
+}

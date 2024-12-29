@@ -1,0 +1,65 @@
+.dark {
+  --background-color: #212121;
+  --primary-color: #fff;
+
+  & .header {
+    &__logo {
+      color: var(--primary-color);
+    }
+  }
+
+  & .hero {
+    &__text {
+      color: var(--cl-black);
+    }
+  }
+
+  & .icon {
+    color: var(--primary-color);
+  }
+
+  & .product {
+    &__bsr,
+    &__link,
+    &__name,
+    &__price > *:nth-child(2) {
+      color: var(--primary-color);
+    }
+  }
+
+  & .promo {
+    &__text {
+      color: var(--cl-black);
+    }
+  }
+
+  & .heading-2 {
+    color: var(--primary-color);
+  }
+
+  & .about {
+    &__title {
+      color: var(--primary-color);
+    }
+  }
+
+  & .offer {
+    &__promo-title {
+      color: var(--primary-color);
+    }
+  }
+
+  & .discover {
+    &__card > * {
+      color: var(--primary-color);
+    }
+  }
+
+  & .btn-link {
+    color: var(--primary-color);
+  }
+
+  & .footer {
+    background-color: var(--cl-yellow-light);
+  }
+}

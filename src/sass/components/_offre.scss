@@ -1,0 +1,59 @@
+.offer {
+  display: grid;
+  grid-template-columns: 1fr 0.7fr;
+  align-items: center;
+  gap: 7rem;
+
+  @include breakpoint(tab-port) {
+    grid-template-columns: 1fr;
+  }
+
+  &__images {
+    display: grid;
+    grid-template-columns: 0.7fr 1fr;
+    align-items: center;
+    gap: 4rem;
+
+    & img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: flex-start;
+  }
+
+  &__promo {
+    display: flex;
+    gap: 1.5rem;
+
+    &-title {
+      color: var(--cl-black);
+      font-size: 1.8rem;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+    &-perc {
+      background-color: var(--cl-yellow-dark);
+      color: var(--cl-white);
+      padding: 0.2rem 1rem;
+    }
+  }
+
+  &__text {
+    font-size: 1.8rem;
+  }
+
+  &__time {
+    font-size: 4rem;
+
+    &:not(:last-child)::after {
+      content: ":";
+      padding-inline: 1.8rem;
+    }
+  }
+}

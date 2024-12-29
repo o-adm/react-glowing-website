@@ -1,0 +1,55 @@
+.promo {
+  display: grid;
+  grid-template-columns: 1fr 0.5fr;
+  gap: 4rem;
+
+  @include breakpoint(tab-port) {
+    grid-template-columns: 1fr;
+  }
+
+  &__card {
+    padding: 4rem;
+    min-height: 42rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: flex-start;
+    position: relative;
+    overflow: hidden;
+
+    @extend %hover-light;
+  }
+
+  &__image {
+    @extend %absolute-0;
+
+    & img {
+      @extend %cover-image;
+      position: relative;
+      z-index: -1;
+      transition: all 0.2s ease-out;
+    }
+
+    &:hover img {
+      transform: scale(1.1);
+    }
+  }
+
+  &__title {
+    color: var(--cl-black);
+    font-size: 3rem;
+    font-weight: 600;
+    max-width: 15ch;
+  }
+
+  &__collection {
+    text-transform: uppercase;
+    font-size: 2rem;
+    color: var(--cl-black);
+    font-weight: 500;
+  }
+
+  &__text {
+    font-size: 1.7rem;
+  }
+}

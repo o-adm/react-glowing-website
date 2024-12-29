@@ -1,0 +1,28 @@
+.icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  color: var(--cl-black);
+  line-height: 0;
+
+  &--light {
+    color: var(--primary-color);
+    width: 2rem;
+    height: 2rem;
+  }
+
+  &__wrapper {
+    display: flex;
+    position: relative;
+  }
+
+  &__sup {
+    background-color: var(--cl-black);
+    color: var(--cl-white);
+    border-radius: 100px;
+    display: inline-block;
+    padding: 0.2rem 0.8rem;
+    position: absolute;
+    top: -1rem;
+    right: -1.13rem;
+  }
+}

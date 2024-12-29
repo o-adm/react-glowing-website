@@ -1,0 +1,52 @@
+.collection {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem;
+
+  @include breakpoint(tab-port) {
+    grid-template-columns: 1fr;
+  }
+
+  &__card {
+    color: var(--cl-black);
+    font-weight: 600;
+    padding: 3rem;
+    min-height: 45rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-radius: 3px;
+    box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    position: relative;
+
+    @extend %hover-light;
+  }
+
+  &__title {
+    font-size: 3.5rem;
+  }
+
+  &__text {
+    margin-bottom: auto;
+    padding-block: 1.5rem;
+    font-size: 1.8rem;
+  }
+
+  &__image {
+    @extend %absolute-0;
+
+    & img {
+      @extend %cover-image;
+
+      position: relative;
+      z-index: -2;
+      transition: all 0.2s ease-out;
+    }
+
+    &:hover img {
+      transform: scale(1.1);
+    }
+  }
+}

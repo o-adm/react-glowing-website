@@ -1,0 +1,37 @@
+.container {
+  margin-inline: auto;
+  padding-inline: 2rem;
+
+  &-lg {
+    max-width: 130rem;
+
+    @include breakpoint(tab-port) {
+      max-width: 75rem;
+    }
+  }
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+
+  &-vertical {
+    flex-direction: column;
+  }
+
+  &-end {
+    justify-content: end;
+  }
+
+  &-hidden {
+    @include hide-on-breakpoint(tab-land);
+  }
+}
+
+.gap-xs {
+  gap: 1.2rem;
+}
+
+.gap-sm {
+  gap: 2.5rem;
+}

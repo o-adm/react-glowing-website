@@ -1,0 +1,56 @@
+.form {
+  &-hide {
+    @include hide-on-breakpoint(tab-land);
+  }
+}
+
+.input {
+  font: inherit;
+  color: inherit;
+  padding: 1rem 1.5rem;
+  outline: none;
+  //   width: 100%;
+
+  &-search {
+    border-radius: 100px;
+    margin-right: -4rem;
+    border: 1px solid var(--primary-color);
+
+    @include hide-on-breakpoint(tab-land);
+
+    &--icon {
+      @include hide-on-breakpoint(tab-land);
+    }
+  }
+}
+
+.btn {
+  display: inline-block;
+  font: inherit;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  transition: all 0.25s ease;
+
+  &-transparent {
+    background: none;
+    text-align: left;
+  }
+
+  &-black {
+    @include button(var(--cl-black), var(--cl-white));
+  }
+
+  &-product {
+    &:is(:hover, :active) {
+      @include button(var(--cl-black), var(--cl-white));
+      border-radius: 3px;
+      border: none;
+    }
+  }
+
+  &-link {
+    background: none;
+  }
+}

@@ -1,0 +1,132 @@
+.product {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  color: var(--cl-black);
+
+  &__bsr,
+  &__link,
+  &__name,
+  &__price > :nth-child(2),
+  &__review {
+    font-weight: 600;
+  }
+
+  &__bsr {
+    font-size: 3.5rem;
+  }
+
+  &__link {
+    color: inherit;
+    font-size: 1.8rem;
+    text-decoration: none;
+    justify-self: end;
+  }
+
+  &__info {
+    margin-block-start: 4rem;
+    grid-column: 1 / -1;
+    display: flex;
+    gap: 3rem;
+    margin-block-end: 2rem;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    padding-block: 2rem;
+
+    &::-webkit-scrollbar {
+      height: 5px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: rgba(74, 73, 73, 0.5);
+      border-radius: 4px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  &__item {
+    min-width: calc((100% - 4 * 3rem) / 5);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+
+    @include breakpoint(tab-land) {
+      min-width: calc((100% - 2 * 3rem) / 3);
+    }
+
+    @include breakpoint(tab-port) {
+      min-width: calc((100% - 3rem) / 2);
+    }
+
+    @include breakpoint(mobile) {
+      min-width: 100%;
+    }
+  }
+
+  &__banner {
+    position: relative;
+  }
+
+  &__actions {
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    transform: translate(3rem, -50%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.35s ease-in-out;
+  }
+
+  &__item:hover &__actions {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(0, -50%);
+  }
+
+  &__promo {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background-color: var(--cl-yellow-dark);
+    color: var(--cl-white);
+    padding: 0.2rem 1rem;
+    font-size: 1.2rem;
+    border-radius: 5px;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__price,
+  &__review {
+    font-size: 1.4rem;
+    display: flex;
+    gap: 0.45rem;
+
+    &:not(:nth-child(1)) {
+      color: var(--primary-color);
+    }
+  }
+
+  &__price {
+    & .before-price {
+      text-decoration: line-through;
+      color: var(--primary-color);
+    }
+  }
+}

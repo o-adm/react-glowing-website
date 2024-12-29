@@ -1,0 +1,35 @@
+// abstracts
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/placeholders";
+@import "abstracts/variables";
+
+// base
+@import "base/animations";
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
+
+// componnets
+@import "components/container";
+@import "components/Form";
+@import "components/Icon";
+@import "components/hero";
+@import "components/collection-card";
+@import "components/product";
+@import "components/promo-card";
+@import "components/about";
+@import "components/offre";
+@import "components/discover-card";
+@import "components/toggle-dark";
+@import "components/scrollTop";
+
+// layout
+@import "layout/header";
+@import "layout/footer";
+
+// pages
+@import "pages/home";
+
+// themes
+@import "themes/theme-dark";
